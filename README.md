@@ -18,7 +18,7 @@ $ git clone https://github.com/awslabs/aws-lambda-cpp.git
 $ cd aws-lambda-cpp
 $ mkdir build
 $ cd build
-$ cmake .. -DCMAKE_BUILD_TYPE=Release
+$ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=~/aws_library
 $ make && make install
 ```
 
@@ -35,7 +35,8 @@ $ cmake .. -DBUILD_ONLY="core" \
   -DBUILD_SHARED_LIBS=OFF \
   -DENABLE_UNITY_BUILD=ON \
   -DCUSTOM_MEMORY_MANAGEMENT=OFF \
-  -DENABLE_UNITY_BUILD=ON
+  -DENABLE_UNITY_BUILD=ON \
+  -DCMAKE_INSTALL_PREFIX=~/aws_library
 
 $ make -j 4
 $ sudo make install
@@ -51,6 +52,7 @@ $ mkdir build
 $ cd build
 $ cmake .. -DCMAKE_BUILD_TYPE=Release \
   -DBUILD_SHARED_LIBS=OFF \
+  -DCMAKE_INSTALL_PREFIX=~/aws_library
 $ make
 $ sudo make install
 ```
@@ -63,7 +65,7 @@ $ git clone https://github.com/nickfox-taterli/aws-lambda-to-api-gateway
 $ cd aws-lambda-to-api-gateway
 $ mkdir build
 $ cd build
-$ cmake .. -DCMAKE_BUILD_TYPE=Release
+$ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=~/aws_library
 $ make
 $ make aws-lambda-package-demo
 ```
