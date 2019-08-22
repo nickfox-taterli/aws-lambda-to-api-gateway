@@ -14,7 +14,7 @@ That being said, the instructions below should work on any Linux distribution.
 ## Build the AWS Lambda SDK
 In a terminal, run the following commands:
 ```bash
-$ git clone https://github.com/awslabs/aws-lambda-cpp.git
+$ git clone https://github.com/awslabs/aws-lambda-cpp.git --depth=1
 $ cd aws-lambda-cpp
 $ mkdir build
 $ cd build
@@ -25,8 +25,7 @@ $ make && make install
 ## Build the AWS C++ SDK
 Start by building the SDK from source.
 ```bash
-$ mkdir ~/install
-$ git clone https://github.com/aws/aws-sdk-cpp.git
+$ git clone https://github.com/aws/aws-sdk-cpp.git --depth=1
 $ cd aws-sdk-cpp
 $ mkdir build
 $ cd build
@@ -46,7 +45,7 @@ $ sudo make install
 Now let's build the C++ Lambda runtime, so in a separate directory clone this repository and follow these steps:
 
 ```bash
-$ git clone https://github.com/awslabs/aws-lambda-cpp-runtime.git
+$ git clone https://github.com/awslabs/aws-lambda-cpp-runtime.git --depth=1
 $ cd aws-lambda-cpp-runtime
 $ mkdir build
 $ cd build
@@ -61,7 +60,7 @@ $ sudo make install
 The last step is to build the Lambda function in `main.cpp` and run the packaging command as follows:
 
 ```bash
-$ git clone https://github.com/nickfox-taterli/aws-lambda-to-api-gateway
+$ git clone https://github.com/nickfox-taterli/aws-lambda-to-api-gateway --depth=1
 $ cd aws-lambda-to-api-gateway
 $ mkdir build
 $ cd build
